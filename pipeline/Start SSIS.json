@@ -1,0 +1,30 @@
+{
+	"name": "Start SSIS",
+	"properties": {
+		"activities": [
+			{
+				"name": "Start PBAV SSIS Integration",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://management.azure.com/subscriptions/6ef0f998-9d16-4c4b-b43f-216d52feb7ad/resourcegroups/pbav-df-rg/providers/Microsoft.DataFactory/factories/pbav-data-factory/integrationruntimes/PBAV-SSISRuntime1/start?api-version=2018-06-01",
+					"body": {
+						"message": "Start my IR"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-05-09T13:29:15Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
