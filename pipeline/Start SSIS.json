@@ -19,6 +19,10 @@
 					"url": "https://management.azure.com/subscriptions/6ef0f998-9d16-4c4b-b43f-216d52feb7ad/resourcegroups/pbav-df-rg/providers/Microsoft.DataFactory/factories/pbav-data-factory/integrationruntimes/PBAV-SSISRuntime1/start?api-version=2018-06-01",
 					"body": {
 						"message": "Start my IR"
+					},
+					"authentication": {
+						"type": "MSI",
+						"resource": "https://management.azure.com/"
 					}
 				}
 			}
