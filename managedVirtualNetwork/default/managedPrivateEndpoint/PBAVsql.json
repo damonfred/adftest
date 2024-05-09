@@ -1,0 +1,7 @@
+{
+	"name": "PBAVsql",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/6ef0f998-9d16-4c4b-b43f-216d52feb7ad/resourceGroups/pbav_rg/providers/Microsoft.Sql/servers/pbav-sql-svr-ase-001",
+		"groupId": "sqlServer"
+	}
+}
