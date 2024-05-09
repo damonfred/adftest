@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "pbav-data-factory"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"PBAV-SSISRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "pbav-sql-svr-ase-001.database.windows.net"
+		},
+		"PBAV-SSISRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "4dm1n157r470r"
+		},
+		"PBAV-SSISRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		},
+		"PBAVsql_properties_privateLinkResourceId": {
+			"value": "/subscriptions/6ef0f998-9d16-4c4b-b43f-216d52feb7ad/resourceGroups/pbav_rg/providers/Microsoft.Sql/servers/pbav-sql-svr-ase-001"
+		},
+		"PBAVsql_properties_groupId": {
+			"value": "sqlServer"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
