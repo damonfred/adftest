@@ -1,0 +1,15 @@
+{
+	"name": "public_boards_feed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestService1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "xml_feeds.public_boards_feed?site=VICBOARDS"
+		},
+		"schema": []
+	}
+}
