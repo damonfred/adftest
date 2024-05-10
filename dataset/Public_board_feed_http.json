@@ -1,5 +1,5 @@
 {
-	"name": "Public_board_feed",
+	"name": "Public_board_feed_http",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "public_boards_feed_xml",
