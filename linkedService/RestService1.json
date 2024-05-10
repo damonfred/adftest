@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://feeds.springboard.com.au/jobtools/xml_feeds.public_boards_feed?site=VICBOARDS",
+			"url": "https://feeds.springboard.com.au/jobtools/",
 			"enableServerCertificateValidation": false,
 			"authenticationType": "Anonymous"
 		}
