@@ -1,0 +1,12 @@
+{
+	"name": "public_boards_feed_xml",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://feeds.springboard.com.au/jobtools/xml_feeds.public_boards_feed?site=VICBOARDS",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
