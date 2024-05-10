@@ -1,0 +1,34 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "public_boards_feed",
+						"type": "DatasetReference"
+					},
+					"name": "publicBoardsFeed"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "compose1"
+				}
+			],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     inferDriftedColumnTypes: true,",
+				"     limit: 100,",
+				"     httpMethod: 'GET',",
+				"     timeout: 30,",
+				"     paginationRules: ['supportRFC5988' -> 'true'],",
+				"     responseFormat: ['type' -> 'xml', 'namespaces' -> true]) ~> publicBoardsFeed",
+				"publicBoardsFeed compose(composition: 'undefined') ~> compose1@(temporary)"
+			]
+		}
+	}
+}

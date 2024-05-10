@@ -1,0 +1,16 @@
+{
+	"name": "Public_board_feed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "public_boards_feed_xml",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Xml",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		}
+	}
+}
