@@ -5,9 +5,9 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "public_boards_feed",
-						"type": "DatasetReference"
+					"linkedService": {
+						"referenceName": "RestService1",
+						"type": "LinkedServiceReference"
 					},
 					"name": "publicBoardsFeed"
 				}
@@ -15,7 +15,10 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "compose1"
+					"name": "flowlet1"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -23,11 +26,13 @@
 				"     validateSchema: false,",
 				"     inferDriftedColumnTypes: true,",
 				"     limit: 100,",
-				"     httpMethod: 'GET',",
+				"     format: 'rest',",
 				"     timeout: 30,",
+				"     httpMethod: 'GET',",
 				"     paginationRules: ['supportRFC5988' -> 'true'],",
-				"     responseFormat: ['type' -> 'xml', 'namespaces' -> true]) ~> publicBoardsFeed",
-				"publicBoardsFeed compose(composition: 'undefined') ~> compose1@(temporary)"
+				"     responseFormat: ['type' -> 'xml', 'namespaces' -> false]) ~> publicBoardsFeed",
+				"derivedColumn1 compose(composition: 'undefined') ~> flowlet1@()",
+				"publicBoardsFeed derive() ~> derivedColumn1"
 			]
 		}
 	}
